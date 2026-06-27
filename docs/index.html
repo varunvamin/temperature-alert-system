@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Alert System | SystemVerilog RTL Design</title>
+    <meta name="description" content="A SystemVerilog-based temperature monitoring system featuring real-time alert logic and hardware verification.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    
+    <div class="container">
+        <header class="glass-panel">
+            <h1>Temperature Alert System</h1>
+            <p class="subtitle">SystemVerilog RTL Design & Hardware Verification</p>
+            <div class="badges">
+                <span class="badge">Language: SystemVerilog</span>
+                <span class="badge">Status: Complete</span>
+                <span class="badge green">CI: Passing</span>
+            </div>
+            <a href="https://github.com/varunvamin/temperature-alert-system" class="btn">View on GitHub</a>
+        </header>
+
+        <main>
+            <section class="glass-panel feature-card" id="overview">
+                <h2>System Overview</h2>
+                <p>This project implements a robust digital logic system for real-time temperature monitoring. It continuously evaluates incoming sensor data against a configurable threshold, utilizing sophisticated debouncing logic to filter out transient glitches and prevent false alarms.</p>
+            </section>
+
+            <section class="glass-panel feature-card" id="architecture">
+                <h2>Architecture Details</h2>
+                <div class="arch-grid">
+                    <div class="arch-item">
+                        <div class="icon">⏱️</div>
+                        <h3>Synchronous Logic</h3>
+                        <p>Fully synchronized to the system clock (clk) with active-low reset (rst_n) for predictable state transitions.</p>
+                    </div>
+                    <div class="arch-item">
+                        <div class="icon">🛡️</div>
+                        <h3>Glitch Filtering</h3>
+                        <p>A parameterized DEBOUNCE_LIMIT ensures alerts are only triggered during sustained abnormal conditions.</p>
+                    </div>
+                    <div class="arch-item">
+                        <div class="icon">🚨</div>
+                        <h3>Hardware Alerts</h3>
+                        <p>Drives buzzer_on and display_alert output signals directly into the physical alerting mechanisms.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="glass-panel feature-card" id="simulation">
+                <h2>Interactive Simulation Concept</h2>
+                <p>Below is a conceptual visualization of the hardware signals during an abnormal temperature spike.</p>
+                <div class="wave-container" id="wave-visualizer">
+                    <!-- JS will populate simulated waveform bars here -->
+                </div>
+                <button id="trigger-sim-btn" class="btn secondary-btn">Simulate Spike</button>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Designed and Built by Varun</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
