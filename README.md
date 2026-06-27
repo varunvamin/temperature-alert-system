@@ -1,5 +1,6 @@
 # Temperature Alert System
 
+![CI](https://github.com/varunvamin/temperature-alert-system/actions/workflows/ci.yml/badge.svg)
 ![Verilog](https://img.shields.io/badge/Language-SystemVerilog-blue)
 ![Status](https://img.shields.io/badge/Status-Complete-green)
 
@@ -36,10 +37,14 @@ The testbench (`temp_alert_tb.sv`) validates the system reliability through the 
 
 You can simulate this design using any standard SystemVerilog simulator such as Icarus Verilog or ModelSim.
 
-Using **Icarus Verilog**:
+The project includes a `Makefile` for automated building and simulation:
 ```bash
-iverilog -g2012 -o temp_alert_sim src/temp_alert.sv tb/temp_alert_tb.sv
-vvp temp_alert_sim
+make simulate
+```
+
+To clean up build artifacts:
+```bash
+make clean
 ```
 
 To view waveforms, you can open the generated `temp_alert.vcd` file in GTKWave:
