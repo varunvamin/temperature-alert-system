@@ -4,6 +4,9 @@
 ![Verilog](https://img.shields.io/badge/Language-SystemVerilog-blue)
 ![Status](https://img.shields.io/badge/Status-Complete-green)
 
+**🚀 [View the Live Interactive Deployment](https://varunvamin.github.io/temperature-alert-system)**
+
+
 A SystemVerilog-based temperature monitoring system featuring real-time alert logic for abnormal conditions. This project demonstrates synchronous digital design, debouncing logic, and hardware verification techniques.
 
 ## Features
