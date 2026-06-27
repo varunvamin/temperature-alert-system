@@ -47,5 +47,4 @@ To view waveforms, you can open the generated `temp_alert.vcd` file in GTKWave:
 gtkwave temp_alert.vcd
 ```
 
-## Portfolio Link
-This project is part of my hardware design portfolio, showcasing practical RTL development and robust testing methodologies.
+
