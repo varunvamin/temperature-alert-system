@@ -1,21 +1,21 @@
-# Temperature Alert System
+# 🌡️ Temperature Alert System
 
-![CI](https://github.com/varunvamin/temperature-alert-system/actions/workflows/ci.yml/badge.svg)
-![Verilog](https://img.shields.io/badge/Language-SystemVerilog-blue)
-![Status](https://img.shields.io/badge/Status-Complete-green)
+<p align="left">
+  <img src="https://img.shields.io/badge/SystemVerilog-000000?style=for-the-badge&logo=verilog&logoColor=white" />
+  <img src="https://img.shields.io/badge/Status-Complete-4CAF50?style=for-the-badge" />
+</p>
 
 **🚀 [View the Live Interactive Deployment](https://varunvamin.github.io/temperature-alert-system)**
 
-
 A SystemVerilog-based temperature monitoring system featuring real-time alert logic for abnormal conditions. This project demonstrates synchronous digital design, debouncing logic, and hardware verification techniques.
 
-## Features
+## ✨ Features
 - **Real-Time Monitoring:** Continuously evaluates incoming temperature data against a configurable threshold.
 - **Glitch Filtering (Debouncing):** Prevents false alarms by ensuring the abnormal temperature is sustained for a predefined number of clock cycles before triggering.
 - **Hardware Alerts:** Triggers `buzzer_on` and `display_alert` signals when abnormal conditions are verified.
 - **Automated Verification:** Comprehensive SystemVerilog testbench included for validating normal conditions, transient spikes, and sustained abnormal temperatures.
 
-## Architecture
+## 🏗️ Architecture
 
 The core component is the `temp_alert` module:
 
@@ -28,7 +28,7 @@ The core component is the `temp_alert` module:
   - `buzzer_on` (Active-high alert logic)
   - `display_alert` (Active-high UI trigger)
 
-## Testbench & Simulation
+## 🧪 Testbench & Simulation
 
 The testbench (`temp_alert_tb.sv`) validates the system reliability through the following scenarios:
 1. **Normal Conditions:** The temperature stays below the threshold. Alerts remain deactivated.
@@ -55,4 +55,5 @@ To view waveforms, you can open the generated `temp_alert.vcd` file in GTKWave:
 gtkwave temp_alert.vcd
 ```
 
-
+## 📝 License
+This project is open-source and available under the [MIT License](LICENSE).
