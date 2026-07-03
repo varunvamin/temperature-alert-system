@@ -31,6 +31,8 @@ module temp_alert #(
     // Internal registers
     logic [3:0] over_threshold_counter;
     
+    // Main sequential logic block for temperature evaluation
+    // Uses active-low asynchronous reset
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             over_threshold_counter <= 4'd0;
