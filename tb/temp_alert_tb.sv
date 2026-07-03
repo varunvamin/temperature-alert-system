@@ -26,13 +26,17 @@ module temp_alert_tb;
         .display_alert(display_alert)
     );
     
-    // Clock generation (50MHz)
-    always #10 clk = ~clk;
+    // ----------------------------------------------------
+    // Clock Generation: 10ns period (100MHz)
+    // ----------------------------------------------------
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk;
+    end
     
     // Test procedure
     initial begin
         // Initialize signals
-        clk = 0;
         rst_n = 0;
         temp_data = 8'd0;
         temp_threshold = 8'd75; // Set threshold to 75 degrees/units
